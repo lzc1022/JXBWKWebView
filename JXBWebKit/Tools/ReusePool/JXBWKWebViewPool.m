@@ -147,11 +147,8 @@
 - (void)_prepareReuseWebView {
     if (!_prepare) return;
     
-    __weak typeof(self) weakSelf = self;
-    dispatch_async(dispatch_get_main_queue(), ^{
-        JXBWKWebView *webView = [JXBWKWebView webView];
-        [weakSelf.reusableWebViewSet addObject:webView];
-    });
+    JXBWKWebView *webView = [JXBWKWebView webView];
+    [weakSelf.reusableWebViewSet addObject:webView];
 }
 
 #pragma mark - Other
