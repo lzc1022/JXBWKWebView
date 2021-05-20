@@ -148,7 +148,7 @@
     if (!_prepare) return;
     
     JXBWKWebView *webView = [JXBWKWebView webView];
-    [weakSelf.reusableWebViewSet addObject:webView];
+    [self.reusableWebViewSet addObject:webView];
 }
 
 #pragma mark - Other
